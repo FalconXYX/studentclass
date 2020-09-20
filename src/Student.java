@@ -9,6 +9,22 @@ public class Student {
         test1 = test2 = test3 = 0;
     }
 
+// Additional constructor -- initialize the name and test scores // to the values provided. 
+    public Student(String nm, int tl, int t2, int t3) {
+        name = nm;
+        test1 = tl;
+        test2 = t2;
+        test3 = t3;
+    }
+// Additional constructor -- initialize the name and test scores // to match those in the parameter s. 
+
+    public Student(Student s) {
+        name = s.name;
+        test1 = s.test1;    
+        test2 = s.test2;
+        test3 = s.test3;
+    }
+
     public void setName(String nm) {
         name = nm;
     }
@@ -66,6 +82,7 @@ public class Student {
         str += "Test 3:" + test2;
         //str += "Average:" + average;
         return str;
+
     }
 
 }
